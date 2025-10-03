@@ -1,26 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #A67C52;      /* Brown (madera) */
+  --secondary: #C1A57B;    /* Light Brown */
+  --contrast: #FFF8E7;     /* Beige claro */
+  --accent: #D9A066;       /* Terracota / naranja vintage */
+  --background: #FDF6EC;   /* Fondo claro beige-blanco */
+  --foreground: #3E2C20;   /* Marrón oscuro para textos principales */
+  --text: #5C4431;         /* Marrón medio */
+}
+
+.dark {
+  --primary: #8B5E3C;      /* Marrón vintage oscuro */
+  --secondary: #A57C52;    /* Marrón medio */
+  --contrast: #DCCBA1;     /* Beige vintage para contrastes */
+  --accent: #C27C50;       /* Terracota más oscuro */
+  --background: #3A2A1F;   /* Fondo marrón oscuro */
+  --foreground: #E6D7B7;   /* Beige claro para textos */
+  --text: #D9C4A1;         /* Beige medio para textos secundarios */
 }
 
 @theme inline {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-contrast: var(--contrast);
+  --color-accent: var(--accent);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-text: var(--text);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--montserrat);
+  --font-quicksand: var(--quicksand);
+  --font-zilla: var(--zilla);
+  --font-roboto: var(--roboto);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 240ms ease, color 240ms ease;
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
 }
