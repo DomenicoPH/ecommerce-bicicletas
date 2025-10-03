@@ -35,7 +35,7 @@ const Navbar = () => {
           </button>
 
           {/* Dropdown de usuario */}
-          <UserDropdown avatarUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPJEt2e1T9APBc2-1YxgVK6zZteCc-txODPCQybE3hyAOXj0i17FWs8diFgfVLAgKvL68mduqx_76MlpO6-8yjVDm-P0GpOhlNLgeWFK6dAYvlp-U8xVedY2NeJQO84-D5692zXPWXsCr2jYz7NRqs1iaazV6mlaZNZKmo9LCace7wz6K51FIxgGhaHZGMoFbvkojIj5HLz6ws-7GtlTBluw52smp4o8R0V-PQShOUy7bxiF726rB7P21YIroAzGhrZ0TnsUVr178" />
+          <UserDropdown avatarUrl="./img/profile-placeholder.png" />
         </div>
 
         {/* Mobile Menu Button */}
