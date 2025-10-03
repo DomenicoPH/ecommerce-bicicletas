@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import ThemeButton from "./ui/ThemeButton";
+import { Menu, X, Search, ShoppingCart } from "lucide-react";
+import UserDropdown from "./ui/UserDropdown";
+import { GiDutchBike } from "react-icons/gi";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -10,7 +11,10 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 w-full bg-background backdrop-blur-md">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="text-2xl font-black text-primary">Vintage Wheels</a>
+        <div className="flex items-center gap-1">
+          <GiDutchBike size={30}/>
+          <a href="#" className="text-2xl font-black">Vintage Wheels</a>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-6 text-fg font-medium">
@@ -20,8 +24,19 @@ const Navbar = () => {
           <li><a href="#contact" className="hover:text-primary transition">Contact</a></li>
         </ul>
 
-        {/* Botón de cambio de tema */}
-        <ThemeButton />
+        {/* Desktop Right Icons */}
+        <div className="hidden md:flex items-center gap-4">
+          <button className="p-2 rounded-full hover:bg-primary/10 transition-colors">
+            <Search size={20} />
+          </button>
+
+          <button className="p-2 rounded-full hover:bg-primary/10 transition-colors">
+            <ShoppingCart size={20} />
+          </button>
+
+          {/* Dropdown de usuario */}
+          <UserDropdown avatarUrl="https://lh3.googleusercontent.com/aida-public/AB6AXuCwPJEt2e1T9APBc2-1YxgVK6zZteCc-txODPCQybE3hyAOXj0i17FWs8diFgfVLAgKvL68mduqx_76MlpO6-8yjVDm-P0GpOhlNLgeWFK6dAYvlp-U8xVedY2NeJQO84-D5692zXPWXsCr2jYz7NRqs1iaazV6mlaZNZKmo9LCace7wz6K51FIxgGhaHZGMoFbvkojIj5HLz6ws-7GtlTBluw52smp4o8R0V-PQShOUy7bxiF726rB7P21YIroAzGhrZ0TnsUVr178" />
+        </div>
 
         {/* Mobile Menu Button */}
         <button
