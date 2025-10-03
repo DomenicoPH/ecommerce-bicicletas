@@ -26,17 +26,17 @@ export default function UserDropdown({ avatarUrl }: UserDropdownProps) {
   return (
     <div className="relative" ref={dropdownRef}>
       <button
-        className="h-10 w-10 rounded-full bg-cover bg-center border border-primary hover:ring-2 hover:ring-primary transition"
+        className="h-10 w-10 rounded-full bg-cover bg-center hover:ring-1 hover:ring-primary transition"
         style={{ backgroundImage: `url(${avatarUrl || "/placeholder-user.png"})` }}
         onClick={() => setOpen(!open)}
       />
 
       <div
-        className={`absolute right-0 mt-2 w-52 bg-background shadow-xl rounded-lg overflow-hidden z-50 border border-primary
+        className={`absolute right-0 mt-4 pb-4 w-52 bg-background shadow-xl rounded-t-none rounded-b-md overflow-hidden z-50
           transform transition-all duration-200 ease-out
           ${open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2 pointer-events-none"}`}
       >
-        <div className="px-4 py-3 flex items-center gap-3 border-b border-primary">
+        <div className="px-4 py-3 flex items-center gap-3 border-b border-primary/10">
           <ThemeButton />
         </div>
 
