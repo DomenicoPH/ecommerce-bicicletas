@@ -1,6 +1,7 @@
 'use client'
 
 import { useTheme } from "next-themes";
+import { Button } from "./ui/ActionButton";
 
 const Hero = () => {
 
@@ -24,12 +25,9 @@ const Hero = () => {
         <p className={`max-w-2xl mx-auto text-lg mb-8 ${colorFix}`}>
           Experience timeless design and modern reliability with our curated collection of vintage bicycles.
         </p>
-        <a
-          href="#shop"
-          className="bg-primary text-contrast px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition"
-        >
+         <Button href="#shop" variant="primary">
           Shop Now
-        </a>
+        </Button>
       </div>
     </section>
   );

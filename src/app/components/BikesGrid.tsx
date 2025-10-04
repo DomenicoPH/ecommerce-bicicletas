@@ -1,3 +1,5 @@
+import { Button } from "./ui/ActionButton";
+
 const bikes = [
   {
     name: "1950s Classic Cruiser",
@@ -43,6 +45,13 @@ const BikesGrid = () => {
             </div>
           ))}
         </div>
+        
+        <div className="flex justify-center items-center py-10">
+          <Button href="/shop" variant="primary">
+            Shop Now
+          </Button>
+        </div>
+      
       </div>
     </section>
   );

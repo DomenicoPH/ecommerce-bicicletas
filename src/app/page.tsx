@@ -8,12 +8,10 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <main className="bg-background">
-      <Navbar />
       <Hero />
       <Features />
       <BikesGrid />
       <Testimonials />
-      <Footer />
     </main>
   );
 }
