@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { MdChevronRight, MdChevronLeft } from "react-icons/md";
+import ProductCard from "./ProductCard";
+import Pagination from "../ui/Pagination";
 
 type Product = {
   title: string;
@@ -60,78 +61,10 @@ export default function ShopGrid() {
       {/* Grid */}
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
         {bikes.map((bike, idx) => (
-          <div
-            key={idx}
-            className="group flex flex-col overflow-hidden rounded-lg bg-background shadow-sm transition-shadow duration-300 hover:shadow-lg"
-          >
-            <div className="relative">
-              <div
-                className="aspect-h-3 aspect-w-4 w-full bg-cover bg-center"
-                style={{ backgroundImage: `url(${bike.img})` }}
-              />
-              <div className="absolute inset-0 bg-black/20 opacity-0 transition-opacity group-hover:opacity-100"></div>
-              <button className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white opacity-0 transition-all group-hover:opacity-100 group-hover:scale-105">
-                View Details
-              </button>
-            </div>
-            <div className="flex flex-1 flex-col p-4">
-              <h3 className="text-base font-semibold text-stone-900 dark:text-white">
-                {bike.title}
-              </h3>
-              <p className="mt-1 text-sm text-stone-600 dark:text-stone-400">
-                {bike.desc}
-              </p>
-              <p className="mt-4 text-lg font-bold text-primary">{bike.price}</p>
-            </div>
-          </div>
+          <ProductCard key={idx} {...bike} />
         ))}
       </div>
-
-      {/* Pagination */}
-      <nav
-        className="mt-8 flex items-center justify-center gap-2"
-        aria-label="Pagination"
-      >
-        <Link
-          href="#"
-          className="inline-flex h-9 w-9 items-center justify-center rounded text-sm font-medium text-stone-500 hover:bg-primary/20 dark:text-stone-400 dark:hover:bg-primary/30"
-        >
-          <MdChevronLeft />
-        </Link>
-        <Link
-          href="#"
-          className="inline-flex h-9 w-9 items-center justify-center rounded bg-primary text-sm font-semibold text-white"
-        >
-          1
-        </Link>
-        <Link
-          href="#"
-          className="inline-flex h-9 w-9 items-center justify-center rounded text-sm font-medium text-stone-500 hover:bg-primary/20 dark:text-stone-400 dark:hover:bg-primary/30"
-        >
-          2
-        </Link>
-        <Link
-          href="#"
-          className="inline-flex h-9 w-9 items-center justify-center rounded text-sm font-medium text-stone-500 hover:bg-primary/20 dark:text-stone-400 dark:hover:bg-primary/30"
-        >
-          3
-        </Link>
-        <span className="inline-flex h-9 w-9 items-center justify-center text-sm font-medium text-stone-500 dark:text-stone-400">
-          ...
-        </span>
-        <Link
-          href="#"
-          className="inline-flex h-9 w-9 items-center justify-center rounded text-sm font-medium text-stone-500 hover:bg-primary/20 dark:text-stone-400 dark:hover:bg-primary/30"
-        >
-          8
-        </Link>
-        <Link
-          href="#"
-          className="inline-flex h-9 w-9 items-center justify-center rounded text-sm font-medium text-stone-500 hover:bg-primary/20 dark:text-stone-400 dark:hover:bg-primary/30"
-        >
-          <MdChevronRight />
-        </Link>
-      </nav>
+        <Pagination currentPage={1} totalPages={8} />
     </div>
   );
 }
