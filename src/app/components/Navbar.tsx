@@ -13,11 +13,11 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-1">
           <GiDutchBike size={30}/>
-          <a href="/" className="text-2xl font-black">Vintage Wheels</a>
+          <a href="/" className="text-2xl font-quicksand">Vintage Wheels</a>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 text-fg font-medium">
+        <ul className="hidden md:flex gap-6 text-fg font-medium font-quicksand">
           <li><a href="/shop" className="hover:text-primary transition">Shop</a></li>
           <li><a href="#services" className="hover:text-primary transition">Services</a></li>
           <li><a href="#about" className="hover:text-primary transition">About</a></li>

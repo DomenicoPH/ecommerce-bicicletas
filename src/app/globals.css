@@ -1,46 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --primary: #A67C52;      /* Brown (madera) */
-  --secondary: #C1A57B;    /* Light Brown */
-  --contrast: #FFF8E7;     /* Beige claro */
-  --accent: #D9A066;       /* Terracota / naranja vintage */
-  --background: #FDF6EC;   /* Fondo claro beige-blanco */
-  --foreground: #3E2C20;   /* Marrón oscuro para textos principales */
-  --text: #5C4431;         /* Marrón medio */
+@variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #A67C52;      /* Brown (madera) */
+  --color-secondary: #C1A57B;    /* Light Brown */
+  --color-contrast: #FFF8E7;     /* Beige claro */
+  --color-accent: #D9A066;       /* Terracota / naranja vintage */
+  --color-background: #FDF6EC;   /* Fondo claro beige-blanco */
+  --color-foreground: #3E2C20;   /* Marrón oscuro para textos principales */
+  --color-text: #5C4431;         /* Marrón medio */
+
+  --font-montserrat: var(--font-montserrat);
+  --font-quicksand: var(--font-quicksand);
+  --font-zilla: var(--font-zilla);
+  --font-roboto: var(--font-roboto);
 }
 
-.dark {
-  --primary: #8B5E3C;      /* Marrón vintage oscuro */
-  --secondary: #A57C52;    /* Marrón medio */
-  --contrast: #DCCBA1;     /* Beige vintage para contrastes */
-  --accent: #C27C50;       /* Terracota más oscuro */
-  --background: #3A2A1F;   /* Fondo marrón oscuro */
-  --foreground: #E6D7B7;   /* Beige claro para textos */
-  --text: #D9C4A1;         /* Beige medio para textos secundarios */
+@layer base {
+  .dark {
+    --color-primary: #8B5E3C;      /* Marrón vintage oscuro */
+    --color-secondary: #A57C52;    /* Marrón medio */
+    --color-contrast: #DCCBA1;     /* Beige vintage para contrastes */
+    --color-accent: #C27C50;       /* Terracota más oscuro */
+    --color-background: #0e0704;   /* Fondo marrón oscuro */
+    --color-foreground: #E6D7B7;   /* Beige claro para textos */
+    --color-text: #D9C4A1;         /* Beige medio para textos secundarios */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 240ms ease, color 240ms ease;
+  }
 }
 
-@theme inline {
-  --color-primary: var(--primary);
-  --color-secondary: var(--secondary);
-  --color-contrast: var(--contrast);
-  --color-accent: var(--accent);
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-text: var(--text);
-
-  --font-sans: var(--montserrat);
-  --font-quicksand: var(--quicksand);
-  --font-zilla: var(--zilla);
-  --font-roboto: var(--roboto);
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  transition: background-color 240ms ease, color 240ms ease;
-}
-
-.clip-diagonal {
-  clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+@layer utilities {
+  .clip-diagonal {
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+  }
 }
