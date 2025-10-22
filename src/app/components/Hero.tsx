@@ -1,4 +1,13 @@
+'use client'
+
+import { useTheme } from "next-themes";
+import { Button } from "./ui/ActionButton";
+
 const Hero = () => {
+
+  const {theme} = useTheme()
+  const colorFix = theme === 'dark' ? 'text-foreground' : 'text-contrast';
+
   return (
     <section
       className="relative bg-gradient-to-br from-primary/10 to-secondary/10 dark:from-primary/20 dark:to-secondary/20 py-32 overflow-hidden"
@@ -10,18 +19,15 @@ const Hero = () => {
       }}
     >
       <div className="container mx-auto px-6 text-center relative z-10">
-        <h1 className="text-5xl font-black tracking-tight text-foreground dark:text-foreground mb-6">
+        <h1 className={`text-5xl font-black tracking-tight mb-6 ${colorFix}`}>
           Rediscover the Ride
         </h1>
-        <p className="max-w-2xl mx-auto text-lg text-text dark:text-foreground mb-8">
+        <p className={`max-w-2xl mx-auto text-lg mb-8 ${colorFix}`}>
           Experience timeless design and modern reliability with our curated collection of vintage bicycles.
         </p>
-        <a
-          href="#shop"
-          className="bg-primary text-contrast px-6 py-3 rounded-full font-medium hover:bg-primary/90 transition"
-        >
+         <Button href="#shop" variant="primary">
           Shop Now
-        </a>
+        </Button>
       </div>
     </section>
   );

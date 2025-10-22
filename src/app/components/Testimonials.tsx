@@ -6,13 +6,13 @@ const Testimonials = () => {
           What Our Riders Say
         </h2>
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-contrast dark:bg-contrast p-6 rounded-xl shadow">
+          <div className="bg-background p-6 rounded-xl shadow">
             <p className="text-text dark:text-text mb-4">
               “The 1970s Roadster I bought is a dream. Looks vintage, rides like new!”
             </p>
             <span className="font-bold text-foreground dark:text-foreground">— Alex M.</span>
           </div>
-          <div className="bg-contrast dark:bg-contrast p-6 rounded-xl shadow">
+          <div className="bg-background p-6 rounded-xl shadow">
             <p className="text-text dark:text-text mb-4">
               “Restoration quality is unmatched. Truly feels like stepping back in time.”
             </p>
