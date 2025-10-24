@@ -35,7 +35,7 @@ const BikesGrid = () => {
               <img
                 src={bike.img}
                 alt={bike.name}
-                className="w-full h-60 object-cover group-hover:scale-105 transition-transform"
+                className="w-full h-75 object-cover group-hover:scale-105 transition-transform"
               />
               <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
                 <span className="text-foreground text-lg font-bold">

@@ -10,7 +10,7 @@ const Features = () => {
           Why Choose Us
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-6 bg-contrast dark:bg-background rounded-2xl shadow-sm cursor-pointer hover:scale-105 transition-all duration-500">
+          <div className="p-6 bg-contrast dark:bg-background rounded-2xl shadow-2xl shadow-contrast/2 hover:shadow-contrast/6 cursor-pointer hover:scale-105 transition-all duration-500">
             <div className="text-4xl mb-4"><GiDutchBike className="mx-auto" size={50} /></div>
             <h3 className="text-xl font-bold mb-2 text-foreground dark:text-foreground">
               Hand-Restored
@@ -19,7 +19,7 @@ const Features = () => {
               Every bike is meticulously restored by our expert craftsmen.
             </p>
           </div>
-          <div className="p-6 bg-contrast dark:bg-background rounded-2xl shadow-sm cursor-pointer hover:scale-105 transition-all duration-500">
+          <div className="p-6 bg-contrast dark:bg-background rounded-2xl shadow-2xl shadow-contrast/2 hover:shadow-contrast/6 cursor-pointer hover:scale-105 transition-all duration-500">
             <div className="text-4xl mb-4"><BsTools className="mx-auto" size={35} /></div>
             <h3 className="text-xl font-bold mb-2 text-foreground dark:text-foreground">
               Authentic Parts
@@ -28,7 +28,7 @@ const Features = () => {
               We source genuine vintage components for lasting quality.
             </p>
           </div>
-          <div className="p-6 bg-contrast dark:bg-background rounded-2xl shadow-sm cursor-pointer hover:scale-105 transition-all duration-500">
+          <div className="p-6 bg-contrast dark:bg-background rounded-2xl shadow-2xl shadow-contrast/2 hover:shadow-contrast/6 cursor-pointer hover:scale-105 transition-all duration-500">
             <div className="text-4xl mb-4"><GiCrystalShine className="mx-auto" size={50} /></div>
             <h3 className="text-xl font-bold mb-2 text-foreground dark:text-foreground">
               Timeless Style
