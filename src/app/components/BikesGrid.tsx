@@ -21,9 +21,9 @@ const bikes = [
 
 const BikesGrid = () => {
   return (
-    <section id="shop" className="py-20 bg-background dark:bg-background">
+    <section id="shop" className="py-20 bg-background">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-black text-foreground dark:text-foreground mb-12 text-center">
+        <h2 className="text-3xl font-black text-foreground mb-12 text-center">
           Featured Bicycles
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -35,10 +35,10 @@ const BikesGrid = () => {
               <img
                 src={bike.img}
                 alt={bike.name}
-                className="w-full h-60 object-cover group-hover:scale-105 transition-transform"
+                className="w-full h-75 object-cover group-hover:scale-105 transition-transform"
               />
-              <div className="absolute inset-0 bg-contrast/40 dark:bg-contrast/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-                <span className="text-foreground dark:text-foreground text-lg font-bold">
+              <div className="absolute inset-0 bg-background/90 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                <span className="text-foreground text-lg font-bold">
                   {bike.name}
                 </span>
               </div>
