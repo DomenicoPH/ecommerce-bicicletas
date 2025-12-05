@@ -2,13 +2,10 @@
 
 import { useState, useRef, useEffect } from "react";
 import { FiUser, FiLogOut } from "react-icons/fi";
+import { FaUserCircle } from "react-icons/fa";
 import ThemeButton from "./ThemeButton";
 
-interface UserDropdownProps {
-  avatarUrl?: string;
-}
-
-export default function UserDropdown({ avatarUrl }: UserDropdownProps) {
+export default function UserDropdown() {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -27,9 +24,10 @@ export default function UserDropdown({ avatarUrl }: UserDropdownProps) {
     <div className="relative" ref={dropdownRef}>
       <button
         className="h-10 w-10 rounded-full bg-cover bg-center hover:ring-1 hover:ring-primary transition"
-        style={{ backgroundImage: `url(${avatarUrl || "/placeholder-user.png"})` }}
         onClick={() => setOpen(!open)}
-      />
+      >
+        <FaUserCircle size={40} className="text-primary" />
+      </ button>
 
       <div
         className={`absolute right-0 mt-4 pb-4 w-52 bg-background shadow-xl rounded-t-none rounded-b-md overflow-hidden z-50
