@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-//import { Geist, Geist_Mono } from "next/font/google";
 import {Montserrat, Quicksand, Zilla_Slab, Roboto} from 'next/font/google';
 import "./globals.css";
 import ThemeWrapper from "./components/wrappers/ThemeWrapper";
@@ -18,7 +17,7 @@ const quicksand = Quicksand({
 })
 
 export const metadata: Metadata = {
-  title: "Vintage Wheels",
+  title: "Biciteclas",
   description: "Ecommerce especializado en la venta y reparación de bicicletas vintage.",
   icons: {
     icon: '/favicon.svg'

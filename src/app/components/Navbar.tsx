@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X, Search, ShoppingCart } from "lucide-react";
 import UserDropdown from "./ui/UserDropdown";
 import { GiDutchBike } from "react-icons/gi";
+import Link from "next/link";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center gap-1">
           <GiDutchBike size={30}/>
-          <a href="/" className="text-2xl font-quicksand">Vintage Wheels</a>
+          <Link href="/" className="text-2xl font-quicksand">Biciteclas</Link>
         </div>
 
         {/* Desktop Menu */}
@@ -35,7 +36,7 @@ const Navbar = () => {
           </button>
 
           {/* Dropdown de usuario */}
-          <UserDropdown avatarUrl="./img/profile-placeholder.png" />
+          <UserDropdown />
         </div>
 
         {/* Mobile Menu Button */}

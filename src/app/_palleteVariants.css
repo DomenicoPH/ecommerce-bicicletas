@@ -3,14 +3,14 @@
 @variant dark (&:is(.dark *));
 
 @theme {
-  --color-primary: #A67C52;     
-  --color-secondary: #C1A57B;
-  --color-contrast: #FFF8E7; 
-  --color-accent: #D9A066;
-  --color-background: #FDF6EC;
-  --color-foreground: #3E2C20;
-  --color-text: #5C4431;      
-
+  --color-primary: #1E3A8A;
+  --color-secondary: #3B82F6;
+  --color-contrast: #FEF9C3;
+  --color-accent: #FACC15;
+  --color-background: #EFF6FF;
+  --color-foreground: #111827;
+  --color-text: #1E40AF;
+  
   --font-montserrat: var(--font-montserrat);
   --font-quicksand: var(--font-quicksand);
   --font-zilla: var(--font-zilla);
@@ -19,13 +19,13 @@
 
 @layer base {
   .dark {
-    --color-primary: #8B5E3C;  
-    --color-secondary: #A57C52;
-    --color-contrast: #DCCBA1;  
-    --color-accent: #C27C50;    
-    --color-background: #0e0704;
-    --color-foreground: #E6D7B7;
-    --color-text: #D9C4A1;      
+    --color-primary: #0F172A;
+    --color-secondary: #1E40AF;
+    --color-contrast: #FDE68A;
+    --color-accent: #CA8A04;
+    --color-background: #0A0F1C;
+    --color-foreground: #F9FAFB;
+    --color-text: #EAB308;
   }
 
   body {
